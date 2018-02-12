@@ -56,13 +56,14 @@ LOCAL_APPS = [
     # custom users app
     'tecnolabs.users.apps.UsersConfig',
     # Your stuff: custom apps go here
+    'tecnolabs.blog',
 ]
 
 # See: https://docs.djangoproject.com/en/dev/ref/settings/#installed-apps
 INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS
 
 # MIDDLEWARE CONFIGURATION
-# ------------------------------------------------------------------------------
+# --------------------------------------------------------------+----------------
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',

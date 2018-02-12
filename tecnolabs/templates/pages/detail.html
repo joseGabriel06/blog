@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>
+    Detalles de producto
+</h2>
+<br/>
+<div class="media">
+    <img alt="Responsive image" class="img-fluid" height="50%" src="/media/{{ object.image }}" width="50%"/>
+    <div class="media-body">
+        <h5 class="mt-0">
+            {{ object.title }}
+        </h5>
+        <p class="mb-0">
+            {{ object.text }}
+        </p>
+    </div>
+</div>
+{% endblock content %}

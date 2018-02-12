@@ -8,6 +8,7 @@ from .models import User
 class MyUserChangeForm(UserChangeForm):
     class Meta(UserChangeForm.Meta):
         model = User
+        #fields = ('name','tipo')
 
 
 class MyUserCreationForm(UserCreationForm):
@@ -18,9 +19,13 @@ class MyUserCreationForm(UserCreationForm):
 
     class Meta(UserCreationForm.Meta):
         model = User
+        
+
+
 
     def clean_username(self):
         username = self.cleaned_data["username"]
+
         try:
             User.objects.get(username=username)
         except User.DoesNotExist:
