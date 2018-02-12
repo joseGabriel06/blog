@@ -11,6 +11,7 @@ class Post(models.Model):
     created_date = models.DateTimeField(default=timezone.now)
     image = models.ImageField( blank=True, null=True,verbose_name='Imagen')
     title = models.CharField(max_length=200)
+    url   = models.URLField(max_length=200, blank=False)
 
     def get_object(self):
         object = get_object_or_404(Post,title=self.kwargs['title'])
