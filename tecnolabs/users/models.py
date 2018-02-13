@@ -11,26 +11,6 @@ USER_TYPE_CHOICES = (
       (2, 'desarrollador'),
   )
 
-class Role(models.Model):
-  '''
-  The Role entries are managed by the system,
-  automatically created via a Django data migration.
-  '''
-  ESTANDAR = 1
-  DESARROLLADOR = 2 
-  
-  
-  
-  
-  ROLE_CHOICES = (
-      (ESTANDAR, 'ESTANDAR'),
-      (DESARROLLADOR, 'desarrollador'),
-  )
-
-  id = models.PositiveSmallIntegerField(choices=ROLE_CHOICES, primary_key=True)
-
-  def __str__(self):
-      return self.get_id_display()
 
 
 
